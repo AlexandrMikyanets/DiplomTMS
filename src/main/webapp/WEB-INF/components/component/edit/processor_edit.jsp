@@ -204,6 +204,7 @@
                     href="https://github.com/AlexandrMikyanets"
                     role="button"
                     data-mdb-ripple-color="dark"
+                    target="_blank"
             >
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-github"
                      viewBox="0 0 16 16">
@@ -216,6 +217,7 @@
                     href="https://www.linkedin.com/in/alexandr-mikyanets-1ba0a922a/"
                     role="button"
                     data-mdb-ripple-color="dark"
+                    target="_blank"
             >
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
                      class="bi bi-linkedin" viewBox="0 0 16 16">
@@ -228,6 +230,7 @@
                     href="https://t.me/n0vell"
                     role=e"button"
                     data-mdb-ripple-color="dark"
+                    target="_blank"
             >
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
                      class="bi bi-telegram" viewBox="0 0 16 16">
