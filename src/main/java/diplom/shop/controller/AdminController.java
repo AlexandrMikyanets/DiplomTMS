@@ -37,7 +37,7 @@ public class AdminController {
     private final ComponentSourceRepository componentSourceRepository;
 
     @Autowired
-    public AdminController(UserRepository userRepository,
+    public AdminController(
                            UserServiceImpl userService,
 //                           BCryptPasswordEncoder passwordEncoder,
                            ComponentServiceImpl componentService,
