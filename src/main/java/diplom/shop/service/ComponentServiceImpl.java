@@ -1,7 +1,5 @@
 package diplom.shop.service;
 
-import diplom.shop.service.ComponentService;
-import diplom.shop.enumeration.ExceptionMessage;
 import diplom.shop.model.component.*;
 import diplom.shop.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;

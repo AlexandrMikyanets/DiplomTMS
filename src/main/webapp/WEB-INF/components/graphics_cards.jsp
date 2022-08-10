@@ -89,7 +89,7 @@
                                         <form action="/config/computer/${sessionScope.get('computer_id')}/graphics_card/${graphics_card.id}/add"
                                               method="post">
                                             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                                            <button class="btn btn-outline-success">Add to configuration</button>
+                                            <button class="btn btn-outline-success">Добавить в заказ</button>
                                         </form>
                                     </c:if>
                                 </div>

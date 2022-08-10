@@ -1,7 +1,6 @@
 package diplom.shop.controller;
 
-import diplom.shop.enumeration.ExceptionMessage;
-import diplom.shop.enumeration.UserRole;
+import diplom.shop.enumm.UserRole;
 import diplom.shop.model.ComponentSource;
 import diplom.shop.model.User;
 import diplom.shop.model.component.*;
@@ -12,11 +11,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.validation.Valid;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
@@ -24,9 +21,9 @@ import java.util.List;
 @Controller
 public class AdminController {
 
-    private final UserRepository userRepository;
+    private UserRepository userRepository;
     private final UserServiceImpl userService;
-    private final BCryptPasswordEncoder passwordEncoder;
+//    private final BCryptPasswordEncoder passwordEncoder;
     private final ComponentServiceImpl componentService;
     private final ComponentRepository componentRepository;
     private final ProcessorRepository processorRepository;
@@ -42,14 +39,21 @@ public class AdminController {
     @Autowired
     public AdminController(UserRepository userRepository,
                            UserServiceImpl userService,
-                           BCryptPasswordEncoder passwordEncoder,
+//                           BCryptPasswordEncoder passwordEncoder,
                            ComponentServiceImpl componentService,
                            ComponentRepository componentRepository,
                            ProcessorRepository processorRepository,
-                           SsdRepository ssdRepository, HddRepository hddRepository, GraphicsCardRepository graphicsCardRepository, RamRepository ramRepository, MotherBoardRepository motherBoardRepository, PowerUnitRepository powerUnitRepository, ComputerCaseRepository computerCaseRepository, ComponentSourceRepository componentSourceRepository) {
-        this.userRepository = userRepository;
+                           SsdRepository ssdRepository,
+                           HddRepository hddRepository,
+                           GraphicsCardRepository graphicsCardRepository,
+                           RamRepository ramRepository,
+                           MotherBoardRepository motherBoardRepository,
+                           PowerUnitRepository powerUnitRepository,
+                           ComputerCaseRepository computerCaseRepository,
+                           ComponentSourceRepository componentSourceRepository) {
+//        this.userRepository = userRepository;
         this.userService = userService;
-        this.passwordEncoder = passwordEncoder;
+//        this.passwordEncoder = passwordEncoder;
         this.componentService = componentService;
         this.componentRepository = componentRepository;
         this.processorRepository = processorRepository;
@@ -63,16 +67,15 @@ public class AdminController {
         this.componentSourceRepository = componentSourceRepository;
     }
 
+    @Autowired
+    public void setUserRepository(UserRepository userRepository) {
+        this.userRepository = userRepository;}
+
     @GetMapping("/admin")
     public String admin(Model model) {
         model.addAttribute("admins", userRepository.findUsersByRole(UserRole.ADMIN));
         model.addAttribute("users", userRepository.findUsersByRole(UserRole.USER));
         return "admin";
-    }
-
-    @GetMapping("/admin/add")
-    public String addAdmin(@ModelAttribute("user") User user) {
-        return "admin_create";
     }
 
     @GetMapping("/admin/content")

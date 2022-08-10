@@ -8,12 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="computer-shop-iipu" />
         <module name="Diplom" />
+        <module name="DiplomTMS" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Diplom" options="-parameters" />
+      <module name="DiplomTMS" options="-parameters" />
       <module name="computer-shop-iipu" options="-parameters" />
     </option>
   </component>

@@ -1,4 +1,4 @@
-package diplom.shop.enumeration;
+package diplom.shop.enumm;
 
 public enum ExceptionMessage {
     USER_NOT_FOUND_BY_EMAIL("Пользователь с адресом электронной почты не найден"),

@@ -90,6 +90,6 @@ public class Computer {
         if (computerCase != null) {
             total += computerCase.getPrice();
         }
-        return Math.round(total * 100) / 100.0;
+        return Math.round(total);
     }
 }

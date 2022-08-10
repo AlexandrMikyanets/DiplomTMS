@@ -1,4 +1,4 @@
-package diplom.shop.enumeration;
+package diplom.shop.enumm;
 
 public enum UserRole {
     ADMIN,

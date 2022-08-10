@@ -1,6 +1,6 @@
 package diplom.shop.service;
 
-import diplom.shop.enumeration.ExceptionMessage;
+import diplom.shop.enumm.ExceptionMessage;
 import diplom.shop.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

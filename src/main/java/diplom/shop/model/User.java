@@ -1,6 +1,6 @@
 package diplom.shop.model;
 
-import diplom.shop.enumeration.UserRole;
+import diplom.shop.enumm.UserRole;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

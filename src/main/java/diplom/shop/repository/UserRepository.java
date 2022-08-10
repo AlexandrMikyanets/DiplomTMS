@@ -1,6 +1,6 @@
 package diplom.shop.repository;
 
-import diplom.shop.enumeration.UserRole;
+import diplom.shop.enumm.UserRole;
 import diplom.shop.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
